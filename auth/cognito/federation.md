@@ -40,7 +40,7 @@ Após validar a autenticidade do token, o middleware gera uma sessão autenticad
 ## Fluxo Middleware
 Uma chave privada deve ser compartilhada entre a aplicação cliente e o Middleware, pois ambos devem ser capazes de validar o token JWT gerado pela aplicação cliente.
 
-Durante a autenticação os dados do participante são obtidos da api CloudLoyalty para criar a sessão no Middleware. Isso é feito através da geração de um token [client credentials](/auth/cognito/client_credentials.md).
+Durante a autenticação os dados do participante são obtidos da api CloudLoyalty para criar a sessão no Middleware. Para isso é necessário a geração de um token [client credentials](/auth/cognito/client_credentials.md). Com o token em mãos o Middleware chama a api e obtêm os dados necessários.
 
 ![Federation](/images/federation-get-participant-info-diagram.png)
 
